@@ -72,9 +72,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(290, 53);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Location = new System.Drawing.Point(290, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(796, 558);
+            this.pictureBox1.Size = new System.Drawing.Size(796, 599);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -110,6 +111,7 @@
             this.btnSquare.Text = "Rektangel";
             this.btnSquare.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSquare.UseVisualStyleBackColor = false;
+            this.btnSquare.CheckedChanged += new System.EventHandler(this.btnSquare_CheckedChanged);
             // 
             // btnCircle
             // 

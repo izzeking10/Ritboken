@@ -52,5 +52,10 @@ namespace Ritboken
         {
             drawingTool = new LineTool(pictureBox1);
         }
+
+        private void btnSquare_CheckedChanged(object sender, EventArgs e)
+        {
+            drawingTool = new SquareTool(pictureBox1);
+        }
     }
 }
