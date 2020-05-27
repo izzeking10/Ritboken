@@ -18,7 +18,7 @@ namespace Ritboken
         {
             for (int i = 0; i < listOfXY.Count - 1; i++)
             {
-                g.DrawLine(Pens.Black, listOfXY[i].X, listOfXY[i].Y, listOfXY[i + 1].X, listOfXY[i + 1].Y);
+                g.DrawLine(pen, listOfXY[i].X, listOfXY[i].Y, listOfXY[i + 1].X, listOfXY[i + 1].Y);
             }
             g.Dispose();
         }

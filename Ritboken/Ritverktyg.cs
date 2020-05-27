@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ritboken 
+namespace Ritboken
 {
-   public class Coordinate
+    public class Coordinate
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -23,6 +22,7 @@ namespace Ritboken
     {
         protected PictureBox pictureBox1;
         protected List<Coordinate> listOfXY;
+        static public Pen pen = new Pen(Color.Black);
         protected bool penDown = false;
 
         protected List<Image> oldBitmaps = new List<Image>();
@@ -42,5 +42,15 @@ namespace Ritboken
         public abstract void MouseDrag(int x, int y);
         public abstract void Draw(Pen p, Graphics g);
 
+        public void Undo()
+        {
+            oldBitmaps.RemoveAt(oldBitmaps.Count - 1);
+            if (oldBitmaps.Count == 0)
+            {
+                Bitmap pict = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                oldBitmaps.Add(pict);
+            }
+            pictureBox1.BackgroundImage = oldBitmaps[oldBitmaps.Count - 1];
+        }
     }
 }

@@ -57,5 +57,32 @@ namespace Ritboken
         {
             drawingTool = new SquareTool(pictureBox1);
         }
+
+        private void btnCircle_CheckedChanged(object sender, EventArgs e)
+        {
+            drawingTool = new CircleTool(pictureBox1);
+        }
+
+        private void Undo_Click(object sender, EventArgs e)
+        {
+            if (drawingTool != null)
+            {
+                drawingTool.Undo();
+            }
+        }
+
+        private void penSize_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangeColor_Click(object sender, EventArgs e)
+        {
+            if ((sender is RadioButton) && (drawingTool != null))
+            {
+                RadioButton b = (sender as RadioButton);
+                DrawingTool.pen.Color = b.BackColor;
+            }
+        }
     }
 }
