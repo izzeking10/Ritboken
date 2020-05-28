@@ -71,11 +71,6 @@ namespace Ritboken
             }
         }
 
-        private void penSize_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ChangeColor_Click(object sender, EventArgs e)
         {
             if ((sender is RadioButton) && (drawingTool != null))
@@ -83,6 +78,24 @@ namespace Ritboken
                 RadioButton b = (sender as RadioButton);
                 DrawingTool.pen.Color = b.BackColor;
             }
+        }
+
+        private void penSize_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                DrawingTool.pen.Width = Convert.ToInt32(penSize.Text);
+            }
+            catch (Exception)
+            {
+                penSize.Text = "1";
+                DrawingTool.pen.Width = 1;
+            }
+        }
+
+        private void Fill_CheckedChanged(object sender, EventArgs e)
+        {
+            drawingTool = new DrawPolygon(pictureBox1);
         }
     }
 }

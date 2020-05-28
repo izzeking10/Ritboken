@@ -23,7 +23,7 @@ namespace Ritboken
             int width = maxX - minX;
             int height = maxY - minY;
             Rectangle circle = new Rectangle(minX, minY, width, height);
-            g.DrawEllipse(pen, circle);
+            g.FillEllipse(pen.Brush, circle);
             g.Dispose();
         }
         public override void MouseDown(int x, int y)

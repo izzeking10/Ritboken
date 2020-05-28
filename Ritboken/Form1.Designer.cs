@@ -35,7 +35,6 @@
             this.btnPen = new System.Windows.Forms.RadioButton();
             this.penSize = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Undo = new System.Windows.Forms.Button();
             this.ChangeColor = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
@@ -54,6 +53,8 @@
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.Undo = new System.Windows.Forms.Button();
+            this.Fill = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +138,7 @@
             this.penSize.Name = "penSize";
             this.penSize.Size = new System.Drawing.Size(100, 26);
             this.penSize.TabIndex = 7;
-            this.penSize.TextChanged += new System.EventHandler(this.penSize_TextChanged);
+            this.penSize.Leave += new System.EventHandler(this.penSize_Leave);
             // 
             // groupBox1
             // 
@@ -167,21 +168,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inställningar";
             // 
-            // Undo
-            // 
-            this.Undo.ForeColor = System.Drawing.Color.Red;
-            this.Undo.Location = new System.Drawing.Point(12, 354);
-            this.Undo.Name = "Undo";
-            this.Undo.Size = new System.Drawing.Size(252, 45);
-            this.Undo.TabIndex = 57;
-            this.Undo.Text = "Ångra";
-            this.Undo.UseVisualStyleBackColor = true;
-            this.Undo.Click += new System.EventHandler(this.Undo_Click);
-            // 
             // ChangeColor
             // 
             this.ChangeColor.Appearance = System.Windows.Forms.Appearance.Button;
-            this.ChangeColor.BackColor = System.Drawing.Color.Yellow;
+            this.ChangeColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ChangeColor.Location = new System.Drawing.Point(23, 84);
             this.ChangeColor.Name = "ChangeColor";
             this.ChangeColor.Size = new System.Drawing.Size(26, 24);
@@ -193,7 +183,7 @@
             // radioButton20
             // 
             this.radioButton20.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.radioButton20.BackColor = System.Drawing.Color.Yellow;
             this.radioButton20.Location = new System.Drawing.Point(23, 114);
             this.radioButton20.Name = "radioButton20";
             this.radioButton20.Size = new System.Drawing.Size(26, 24);
@@ -205,7 +195,7 @@
             // radioButton24
             // 
             this.radioButton24.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.radioButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.radioButton24.ForeColor = System.Drawing.Color.Coral;
             this.radioButton24.Location = new System.Drawing.Point(23, 144);
             this.radioButton24.Name = "radioButton24";
@@ -218,7 +208,7 @@
             // radioButton12
             // 
             this.radioButton12.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton12.BackColor = System.Drawing.Color.Aqua;
+            this.radioButton12.BackColor = System.Drawing.Color.Teal;
             this.radioButton12.Location = new System.Drawing.Point(55, 84);
             this.radioButton12.Name = "radioButton12";
             this.radioButton12.Size = new System.Drawing.Size(26, 24);
@@ -230,7 +220,7 @@
             // radioButton18
             // 
             this.radioButton18.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton18.BackColor = System.Drawing.Color.White;
+            this.radioButton18.BackColor = System.Drawing.Color.SaddleBrown;
             this.radioButton18.ForeColor = System.Drawing.Color.Coral;
             this.radioButton18.Location = new System.Drawing.Point(183, 145);
             this.radioButton18.Name = "radioButton18";
@@ -243,7 +233,7 @@
             // radioButton13
             // 
             this.radioButton13.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButton13.BackColor = System.Drawing.Color.Aqua;
             this.radioButton13.Location = new System.Drawing.Point(55, 114);
             this.radioButton13.Name = "radioButton13";
             this.radioButton13.Size = new System.Drawing.Size(26, 24);
@@ -255,7 +245,7 @@
             // radioButton15
             // 
             this.radioButton15.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.radioButton15.ForeColor = System.Drawing.Color.Coral;
             this.radioButton15.Location = new System.Drawing.Point(55, 144);
             this.radioButton15.Name = "radioButton15";
@@ -268,7 +258,7 @@
             // radioButton7
             // 
             this.radioButton7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton7.BackColor = System.Drawing.Color.Gray;
+            this.radioButton7.BackColor = System.Drawing.Color.Black;
             this.radioButton7.ForeColor = System.Drawing.Color.Coral;
             this.radioButton7.Location = new System.Drawing.Point(183, 85);
             this.radioButton7.Name = "radioButton7";
@@ -281,7 +271,7 @@
             // radioButton43
             // 
             this.radioButton43.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton43.BackColor = System.Drawing.Color.Blue;
+            this.radioButton43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.radioButton43.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton43.Location = new System.Drawing.Point(151, 84);
             this.radioButton43.Name = "radioButton43";
@@ -294,7 +284,7 @@
             // radioButton45
             // 
             this.radioButton45.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.radioButton45.BackColor = System.Drawing.Color.Blue;
             this.radioButton45.ForeColor = System.Drawing.SystemColors.Control;
             this.radioButton45.Location = new System.Drawing.Point(151, 114);
             this.radioButton45.Name = "radioButton45";
@@ -319,8 +309,8 @@
             // radioButton37
             // 
             this.radioButton37.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton37.BackColor = System.Drawing.Color.Lime;
-            this.radioButton37.Location = new System.Drawing.Point(119, 144);
+            this.radioButton37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.radioButton37.Location = new System.Drawing.Point(119, 145);
             this.radioButton37.Name = "radioButton37";
             this.radioButton37.Size = new System.Drawing.Size(26, 24);
             this.radioButton37.TabIndex = 68;
@@ -355,7 +345,7 @@
             // radioButton19
             // 
             this.radioButton19.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.radioButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.radioButton19.ForeColor = System.Drawing.Color.Coral;
             this.radioButton19.Location = new System.Drawing.Point(151, 144);
             this.radioButton19.Name = "radioButton19";
@@ -381,7 +371,7 @@
             // radioButton10
             // 
             this.radioButton10.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.radioButton10.BackColor = System.Drawing.Color.Lime;
             this.radioButton10.Location = new System.Drawing.Point(119, 114);
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(26, 24);
@@ -393,7 +383,7 @@
             // radioButton8
             // 
             this.radioButton8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radioButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.radioButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.radioButton8.Location = new System.Drawing.Point(183, 115);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(26, 24);
@@ -402,11 +392,38 @@
             this.radioButton8.UseVisualStyleBackColor = false;
             this.radioButton8.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
+            // Undo
+            // 
+            this.Undo.ForeColor = System.Drawing.Color.Red;
+            this.Undo.Location = new System.Drawing.Point(12, 354);
+            this.Undo.Name = "Undo";
+            this.Undo.Size = new System.Drawing.Size(252, 45);
+            this.Undo.TabIndex = 57;
+            this.Undo.Text = "Ångra";
+            this.Undo.UseVisualStyleBackColor = true;
+            this.Undo.Click += new System.EventHandler(this.Undo_Click);
+            // 
+            // Fill
+            // 
+            this.Fill.Appearance = System.Windows.Forms.Appearance.Button;
+            this.Fill.BackColor = System.Drawing.SystemColors.Control;
+            this.Fill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Fill.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Fill.Location = new System.Drawing.Point(12, 298);
+            this.Fill.Name = "Fill";
+            this.Fill.Size = new System.Drawing.Size(252, 45);
+            this.Fill.TabIndex = 58;
+            this.Fill.Text = "Fyll";
+            this.Fill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Fill.UseVisualStyleBackColor = false;
+            this.Fill.CheckedChanged += new System.EventHandler(this.Fill_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1098, 623);
+            this.Controls.Add(this.Fill);
             this.Controls.Add(this.Undo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnPen);
@@ -451,6 +468,7 @@
         private System.Windows.Forms.RadioButton radioButton21;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton Fill;
     }
 }
 
