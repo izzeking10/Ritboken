@@ -34,7 +34,16 @@ namespace Ritboken
                 drawingTool.MouseUp(e.X, e.Y);
             }
         }
-
+        private void showColors()
+        {
+            foreach (RadioButton tb in this.Controls.OfType<RadioButton>())
+            {
+                if (tb.Tag as string == "1")
+                {
+                    tb.Visible = true;
+                }
+            }
+        }
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (drawingTool != null)
@@ -46,6 +55,7 @@ namespace Ritboken
         private void btnPen_CheckedChanged(object sender, EventArgs e)
         {
             drawingTool = new PenTool(pictureBox1);
+
         }
 
         private void btnLine_CheckedChanged(object sender, EventArgs e)
@@ -75,7 +85,7 @@ namespace Ritboken
         {
             if ((sender is RadioButton) && (drawingTool != null))
             {
-                RadioButton b = (sender as RadioButton);
+                RadioButton b = sender as RadioButton;
                 DrawingTool.pen.Color = b.BackColor;
             }
         }

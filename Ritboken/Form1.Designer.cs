@@ -177,7 +177,9 @@
             this.ChangeColor.Size = new System.Drawing.Size(26, 24);
             this.ChangeColor.TabIndex = 85;
             this.ChangeColor.TabStop = true;
+            this.ChangeColor.Tag = "1";
             this.ChangeColor.UseVisualStyleBackColor = false;
+            this.ChangeColor.Visible = false;
             this.ChangeColor.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton20
@@ -189,7 +191,9 @@
             this.radioButton20.Size = new System.Drawing.Size(26, 24);
             this.radioButton20.TabIndex = 84;
             this.radioButton20.TabStop = true;
+            this.radioButton20.Tag = "1";
             this.radioButton20.UseVisualStyleBackColor = false;
+            this.radioButton20.Visible = false;
             this.radioButton20.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton24
@@ -202,7 +206,9 @@
             this.radioButton24.Size = new System.Drawing.Size(26, 24);
             this.radioButton24.TabIndex = 82;
             this.radioButton24.TabStop = true;
+            this.radioButton24.Tag = "1";
             this.radioButton24.UseVisualStyleBackColor = false;
+            this.radioButton24.Visible = false;
             this.radioButton24.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton12
@@ -214,7 +220,9 @@
             this.radioButton12.Size = new System.Drawing.Size(26, 24);
             this.radioButton12.TabIndex = 80;
             this.radioButton12.TabStop = true;
+            this.radioButton12.Tag = "1";
             this.radioButton12.UseVisualStyleBackColor = false;
+            this.radioButton12.Visible = false;
             this.radioButton12.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton18
@@ -227,7 +235,9 @@
             this.radioButton18.Size = new System.Drawing.Size(26, 24);
             this.radioButton18.TabIndex = 62;
             this.radioButton18.TabStop = true;
+            this.radioButton18.Tag = "1";
             this.radioButton18.UseVisualStyleBackColor = false;
+            this.radioButton18.Visible = false;
             this.radioButton18.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton13
@@ -239,7 +249,9 @@
             this.radioButton13.Size = new System.Drawing.Size(26, 24);
             this.radioButton13.TabIndex = 79;
             this.radioButton13.TabStop = true;
+            this.radioButton13.Tag = "1";
             this.radioButton13.UseVisualStyleBackColor = false;
+            this.radioButton13.Visible = false;
             this.radioButton13.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton15
@@ -252,7 +264,9 @@
             this.radioButton15.Size = new System.Drawing.Size(26, 24);
             this.radioButton15.TabIndex = 77;
             this.radioButton15.TabStop = true;
+            this.radioButton15.Tag = "1";
             this.radioButton15.UseVisualStyleBackColor = false;
+            this.radioButton15.Visible = false;
             this.radioButton15.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton7
@@ -265,7 +279,9 @@
             this.radioButton7.Size = new System.Drawing.Size(26, 24);
             this.radioButton7.TabIndex = 75;
             this.radioButton7.TabStop = true;
+            this.radioButton7.Tag = "1";
             this.radioButton7.UseVisualStyleBackColor = false;
+            this.radioButton7.Visible = false;
             this.radioButton7.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton43
@@ -278,7 +294,9 @@
             this.radioButton43.Size = new System.Drawing.Size(26, 24);
             this.radioButton43.TabIndex = 73;
             this.radioButton43.TabStop = true;
+            this.radioButton43.Tag = "1";
             this.radioButton43.UseVisualStyleBackColor = false;
+            this.radioButton43.Visible = false;
             this.radioButton43.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton45
@@ -291,7 +309,9 @@
             this.radioButton45.Size = new System.Drawing.Size(26, 24);
             this.radioButton45.TabIndex = 72;
             this.radioButton45.TabStop = true;
+            this.radioButton45.Tag = "1";
             this.radioButton45.UseVisualStyleBackColor = false;
+            this.radioButton45.Visible = false;
             this.radioButton45.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton35
@@ -303,7 +323,9 @@
             this.radioButton35.Size = new System.Drawing.Size(26, 24);
             this.radioButton35.TabIndex = 69;
             this.radioButton35.TabStop = true;
+            this.radioButton35.Tag = "1";
             this.radioButton35.UseVisualStyleBackColor = false;
+            this.radioButton35.Visible = false;
             this.radioButton35.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton37
@@ -315,7 +337,9 @@
             this.radioButton37.Size = new System.Drawing.Size(26, 24);
             this.radioButton37.TabIndex = 68;
             this.radioButton37.TabStop = true;
+            this.radioButton37.Tag = "1";
             this.radioButton37.UseVisualStyleBackColor = false;
+            this.radioButton37.Visible = false;
             this.radioButton37.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton27
@@ -327,7 +351,9 @@
             this.radioButton27.Size = new System.Drawing.Size(26, 24);
             this.radioButton27.TabIndex = 65;
             this.radioButton27.TabStop = true;
+            this.radioButton27.Tag = "1";
             this.radioButton27.UseVisualStyleBackColor = false;
+            this.radioButton27.Visible = false;
             this.radioButton27.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton29
@@ -339,7 +365,9 @@
             this.radioButton29.Size = new System.Drawing.Size(26, 24);
             this.radioButton29.TabIndex = 64;
             this.radioButton29.TabStop = true;
+            this.radioButton29.Tag = "1";
             this.radioButton29.UseVisualStyleBackColor = false;
+            this.radioButton29.Visible = false;
             this.radioButton29.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton19
@@ -352,7 +380,9 @@
             this.radioButton19.Size = new System.Drawing.Size(26, 24);
             this.radioButton19.TabIndex = 61;
             this.radioButton19.TabStop = true;
+            this.radioButton19.Tag = "1";
             this.radioButton19.UseVisualStyleBackColor = false;
+            this.radioButton19.Visible = false;
             this.radioButton19.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton21
@@ -365,7 +395,9 @@
             this.radioButton21.Size = new System.Drawing.Size(26, 24);
             this.radioButton21.TabIndex = 60;
             this.radioButton21.TabStop = true;
+            this.radioButton21.Tag = "1";
             this.radioButton21.UseVisualStyleBackColor = false;
+            this.radioButton21.Visible = false;
             this.radioButton21.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton10
@@ -377,7 +409,9 @@
             this.radioButton10.Size = new System.Drawing.Size(26, 24);
             this.radioButton10.TabIndex = 58;
             this.radioButton10.TabStop = true;
+            this.radioButton10.Tag = "1";
             this.radioButton10.UseVisualStyleBackColor = false;
+            this.radioButton10.Visible = false;
             this.radioButton10.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // radioButton8
@@ -389,7 +423,9 @@
             this.radioButton8.Size = new System.Drawing.Size(26, 24);
             this.radioButton8.TabIndex = 57;
             this.radioButton8.TabStop = true;
+            this.radioButton8.Tag = "1";
             this.radioButton8.UseVisualStyleBackColor = false;
+            this.radioButton8.Visible = false;
             this.radioButton8.Click += new System.EventHandler(this.ChangeColor_Click);
             // 
             // Undo
@@ -413,7 +449,7 @@
             this.Fill.Name = "Fill";
             this.Fill.Size = new System.Drawing.Size(252, 45);
             this.Fill.TabIndex = 58;
-            this.Fill.Text = "Fyll";
+            this.Fill.Text = "Triangel";
             this.Fill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Fill.UseVisualStyleBackColor = false;
             this.Fill.CheckedChanged += new System.EventHandler(this.Fill_CheckedChanged);

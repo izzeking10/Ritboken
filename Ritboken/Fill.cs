@@ -16,43 +16,38 @@ namespace Ritboken
         }
         public override void Draw(Pen p, Graphics g)
         {
-            if (points == 3)
+            if (listOfXY.Count == 3)
             {
-                g.DrawPolygon(pen, curvePoints);
+                PointF point1 = new PointF(listOfXY[0].X, listOfXY[0].Y);
+                PointF point2 = new PointF(listOfXY[1].X, listOfXY[1].Y);
+                PointF point3 = new PointF(listOfXY[2].X, listOfXY[2].Y);
+                PointF[] curvePoints =
+                {
+                point1,
+                point2,
+                point3
+            };
+                g.FillPolygon(p.Brush, curvePoints);
+                listOfXY.Clear();
             }
+            
            
         }
         public override void MouseDown(int x, int y)
         {
-            if (penDown == true)
-            {
-                Bitmap pict = new Bitmap(pictureBox1.BackgroundImage);
-                Graphics g = Graphics.FromImage(pict);
-                Draw(Pens.Black, g);
-                pictureBox1.BackgroundImage = pict;
-                Coordinate c = new Coordinate(x, y);
-                listOfXY.Add(c);
-            }
-            penDown = true;
+            Bitmap pict = new Bitmap(pictureBox1.BackgroundImage);
+            Graphics g = Graphics.FromImage(pict);
             Coordinate c = new Coordinate(x, y);
             listOfXY.Add(c);
-        }
+            Draw(pen, g);
+            pictureBox1.BackgroundImage = pict;}
         public override void MouseDrag(int x, int y)
         {
 
         }
         public override void MouseUp(int x, int y)
         {
-            penDown = false;
-            Coordinate c = new Coordinate(x, y);
-            listOfXY.Add(c);
-            Bitmap pict = new Bitmap(pictureBox1.BackgroundImage);
 
-            Graphics g = Graphics.FromImage(pict);
-            Draw(Pens.Black, g);
-            pictureBox1.BackgroundImage = pict;
-            listOfXY.Clear();
-            oldBitmaps.Add(pictureBox1.BackgroundImage);
         }
 
     }

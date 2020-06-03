@@ -23,7 +23,7 @@ namespace Ritboken
           int width = maxX - minX;
           int height = maxY - minY;
             Rectangle rectangle = new Rectangle(minX, minY, width, height);
-            g.FillRectangle(pen.Brush, rectangle);
+            g.FillRectangle(p.Brush, rectangle);
             g.Dispose();
         }
         public override void MouseDown(int x, int y)
@@ -45,7 +45,7 @@ namespace Ritboken
             Bitmap pict = new Bitmap(pictureBox1.BackgroundImage);
 
             Graphics g = Graphics.FromImage(pict);
-            Draw(Pens.Black, g);
+            Draw(pen, g);
             pictureBox1.BackgroundImage = pict;
             oldBitmaps.Add(pictureBox1.BackgroundImage);
             listOfXY.Clear();

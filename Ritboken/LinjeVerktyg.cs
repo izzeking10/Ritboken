@@ -40,7 +40,7 @@ namespace Ritboken
             Bitmap pict = new Bitmap(pictureBox1.BackgroundImage);
 
             Graphics g = Graphics.FromImage(pict);
-            Draw(Pens.Black, g);
+            Draw(pen, g);
             pictureBox1.BackgroundImage = pict;
             listOfXY.Clear();
             oldBitmaps.Add(pictureBox1.BackgroundImage);
